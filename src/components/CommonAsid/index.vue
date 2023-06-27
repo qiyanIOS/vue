@@ -4,7 +4,7 @@
     class="el-menu-vertical-demo"
     @open="handleOpen"
     @close="handleClose"
-    :collapse="isCollapse"
+    :collapse="isCollapsed"
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b"
@@ -61,7 +61,6 @@
 export default {
   data() {
     return {
-      isCollapse: false,
       menuData: [
         {
           path: "home",
@@ -123,10 +122,15 @@ export default {
   },
   computed: {
     noChildren() {
+      console.log("ccc");
       return this.menuData.filter((item) => !item.children);
     },
     hasChildren() {
       return this.menuData.filter((item) => item.children);
+    },
+    isCollapsed() {
+      console.log("nn", this.$store);
+      return this.$store.state.tab.isCollapse;
     },
   },
 };
