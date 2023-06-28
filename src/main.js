@@ -14,7 +14,8 @@ import {
   MenuItem,
   Dropdown,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Col
 
 } from 'element-ui'
 
@@ -34,6 +35,7 @@ Vue.use(MenuItem)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
+Vue.use(Col)
 
 new Vue({
   router,

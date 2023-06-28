@@ -9,7 +9,7 @@
     text-color="#fff"
     active-text-color="#ffd04b"
   >
-    <h3>后台管理系统</h3>
+    <h3>{{ isCollapsed ? "后台" : "后台管理系统" }}</h3>
     <el-menu-item
       @click="clickMenu(item)"
       v-for="item in noChildren"
@@ -45,6 +45,7 @@
 }
 .el-menu {
   height: 100vh;
+  border-right: none;
   h3 {
     color: #fff;
     font-size: 16px;
@@ -129,7 +130,6 @@ export default {
       return this.menuData.filter((item) => item.children);
     },
     isCollapsed() {
-      console.log("nn", this.$store);
       return this.$store.state.tab.isCollapse;
     },
   },
