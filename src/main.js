@@ -15,12 +15,16 @@ import {
   Dropdown,
   DropdownMenu,
   DropdownItem,
-  Col
+  Col,
+  Card,
+  Table,
+  TableColumn
 
 } from 'element-ui'
 
 import router from "./router"
 import store from './store/index'
+import mock from './api/mock'
 Vue.config.productionTip = false
 Vue.use(Row)
 Vue.use(Button)
@@ -36,6 +40,9 @@ Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
 Vue.use(Col)
+Vue.use(Card)
+Vue.use(Table)
+Vue.use(TableColumn)
 
 new Vue({
   router,
