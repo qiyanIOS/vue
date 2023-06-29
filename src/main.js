@@ -24,6 +24,7 @@ import {
 
 import router from "./router"
 import store from './store/index'
+import mock from './api/mock'
 Vue.config.productionTip = false
 Vue.use(Row)
 Vue.use(Button)
