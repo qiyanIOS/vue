@@ -5,8 +5,16 @@
         @click="isHiddenMethon"
         icon="el-icon-menu"
         size="mini"
+        style="margin-right: 20px"
       ></el-button>
-      <span class="text">首页</span>
+      <el-breadcrumb separator="/">
+        <el-breadcrumb-item
+          v-for="item in tags"
+          :key="item.path"
+          :to="{ path: item.path }"
+          >{{ item.label }}</el-breadcrumb-item
+        >
+      </el-breadcrumb>
     </div>
     <div class="r-content">
       <el-dropdown>
@@ -23,13 +31,23 @@
 </template>
 
 <script>
+import tab from "../../store/tab";
+import { mapState } from "vuex";
 export default {
   name: "CommonHeader",
   methods: {
     isHiddenMethon() {
-      console.log("dddd");
       this.$store.commit("collapsMenu");
     },
+  },
+  computed: {
+    ...mapState({
+      tags: (state) => state.tab.menuList,
+    }),
+  },
+
+  mounted() {
+    console.log("@@@", mapState(["menuList"]));
   },
 };
 </script>
@@ -46,6 +64,22 @@ export default {
     color: #fff;
     font-size: 14px;
     padding: 0 20px;
+  }
+  .l-content {
+    display: flex;
+    align-items: center;
+    /deep/.el-breadcrumb__item {
+      .el-breadcrumb__inner {
+        &.is-link {
+          color: #666;
+        }
+      }
+      &:last-child {
+        .el-breadcrumb__inner {
+          color: #fff;
+        }
+      }
+    }
   }
 
   .r-content {

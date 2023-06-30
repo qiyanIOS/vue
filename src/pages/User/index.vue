@@ -1,5 +1,10 @@
 <template>
-  <div>User</div>
+  <div class="manage">
+    <div class="user-header">
+      <el-button type="primary"> + 新增 </el-button>
+    </div>
+    <div>User</div>
+  </div>
 </template>
 
 <script>

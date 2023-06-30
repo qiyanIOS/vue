@@ -144,7 +144,7 @@ export default {
 
       let arr = [];
 
-      -lineData.nameList.forEach((key) => {
+      lineData.nameList.forEach((key) => {
         arr.push({
           name: key,
           type: "line",
@@ -199,7 +199,7 @@ export default {
         grid: {
           left: "1%",
           right: "2%",
-          bottom: "30%",
+          bottom: "10%",
           // top:"10%"
           containLabel: true,
         },
@@ -229,7 +229,7 @@ export default {
           {
             name: "chanping",
             type: "pie",
-            radius: "50%",
+            radius: "80%",
             data: videoData,
             emphasis: {
               itemStyle: {
@@ -334,7 +334,7 @@ export default {
   .el-card {
     margin-top: 20px;
     width: 48%;
-    height: 200px;
+    height: 280px;
   }
 }
 </style>

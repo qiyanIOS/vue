@@ -4,7 +4,7 @@ let list = []
 export default {
     getStatisticalData: () => {
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 10; i++) {
             list.push(
                 Mock.mock({
                     苹果: Mock.Random.float(100, 8000, 0, 0),
@@ -79,7 +79,7 @@ export default {
                     },
                 ],
                 orderData: {
-                    date: ['2019-01', '2019 - 02', '2019-03', '2019 - 04', '2019-05', '2019-06', '2019-07'],
+                    date: ['2019-01', '2019 - 02', '2019-03', '2019 - 04', '2019-05', '2019-06', '2019-07', '2019-08'],
                     data: list
                 },
                 tableData: [

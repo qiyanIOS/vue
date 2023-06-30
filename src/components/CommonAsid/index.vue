@@ -116,6 +116,8 @@ export default {
     },
     //点击菜单
     clickMenu(item) {
+      //点击数据，vuex修改值
+      this.$store.commit("getRouterSrc", item);
       this.$router.push({
         name: item.path,
       });

@@ -18,7 +18,10 @@ import {
   Col,
   Card,
   Table,
-  TableColumn
+  TableColumn,
+  Breadcrumb,
+  BreadcrumbItem,
+  Tag
 
 } from 'element-ui'
 
@@ -43,6 +46,9 @@ Vue.use(Col)
 Vue.use(Card)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Tag)
 new Vue({
   router,
   store,
