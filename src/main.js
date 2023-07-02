@@ -21,7 +21,17 @@ import {
   TableColumn,
   Breadcrumb,
   BreadcrumbItem,
-  Tag
+  Tag,
+  Dialog,
+  Form,
+  FormItem,
+  Input,
+  Option,
+  DatePicker,
+  Pagination,
+
+
+
 
 } from 'element-ui'
 
@@ -49,6 +59,17 @@ Vue.use(TableColumn)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 Vue.use(Tag)
+Vue.use(Dialog)
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(DatePicker)
+
+Vue.use(Pagination)
+
+
 new Vue({
   router,
   store,

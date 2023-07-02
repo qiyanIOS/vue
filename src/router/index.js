@@ -6,6 +6,7 @@ import Main from "../pages/Main"
 import Mall from "../pages/Mall"
 import PageTwo from "../pages/PageTwo"
 import PageOne from "../pages/PageOne"
+import Login from "../pages/Login"
 //引入路由
 Vue.use(vueRouter)
 
@@ -45,6 +46,13 @@ const routes = [
             },
 
         ]
+    },
+    {
+        name: 'login',
+        path: '/login',
+        component: Login
+
+
     }
 
 
@@ -59,6 +67,20 @@ vueRouter.prototype.push = function (location, resolve, reject) {
         originPush.call(this, location, () => { }, () => { })
     }
 }
-export default new vueRouter({
+const router = new vueRouter({
     routes
 })
+
+router.beforeEach((to, form, next) => {
+    const toke = localStorage.getItem('token')
+    if (!toke && to.name !== 'login') {
+        next({ name: 'login' })
+    }
+    if (toke && to.name === 'login') {
+        next({ name: 'home' })
+    } else {
+        next()
+    }
+})
+
+export default router
